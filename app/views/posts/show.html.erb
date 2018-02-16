@@ -2,4 +2,12 @@
 <hr />
 <p><%= @post.content %></p>
 <p><%= @post.user.username %></p>
-<p><%=  %></p>
+<ul>
+
+    <% @post.comments.each do |comment| %>
+
+        <li><%= comment.title %></li>
+        <li><%= comment.content %></li>
+
+    <% end %>
+</ul>
