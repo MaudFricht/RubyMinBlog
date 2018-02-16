@@ -1,0 +1,13 @@
+<h1>Comments</h1>
+
+<ul>
+    <% @comments.each do |comment| %>
+        <li><%= comment.title %></li>
+        <li><%= comment.content %></li>
+        <li><%= comment.datetime %></li>
+        <li><%= comment.user_id %></li>
+
+    <% end %>
+</ul>
+
+<%= link_to "L'article", posts_path %>
