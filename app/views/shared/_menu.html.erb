@@ -4,7 +4,7 @@
           <% if user_signed_in? %>
             <p class="info" title="Editer mon compte"><%= link_to current_user.username, edit_user_registration_path %></p>
             <p><%= link_to "Nos gastronomes", users_path %></p>
-            <p><%= link_to "Derniers articles", posts_path %></p>
+            <p><%= link_to "Liste des Articles", posts_path %></p>
             <p><%= link_to "Nouvel article", new_post_path %></p>
             <p><%= link_to 'Déconnexion', destroy_user_session_path, method: :delete %></p>
 

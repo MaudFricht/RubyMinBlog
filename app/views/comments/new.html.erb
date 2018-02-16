@@ -8,7 +8,7 @@
             <%= f.text_area :content, placeholder: 'Ecrivez votre commentaire' %><br><br>
 
             <%= f.hidden_field :user_id, value: current_user.id %>
-            <%= f.hidden_field :post_id, value: @post_id %>
+            <%= f.hidden_field :post_id, value: params[:format] %>
 
 
             <%= f.submit 'Envoyer' %>

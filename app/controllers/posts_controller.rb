@@ -2,29 +2,33 @@ class PostsController < ApplicationController
 
     before_action :find_post, only: [:show, :destroy]
 
-      def index
+    def index
         @posts = Post.all
-      end
+    end
 
       def show;end
 
-      def new
+    def new
         @post = Post.new
-      end
+    end
 
-      def create
+    def edit
+      @post = Post.find(params[:id])
+    end
+
+    def create
         post = Post.create(params[:post].permit!)
         redirect_to root_path if post.persisted?
-      end
+    end
 
-      def destroy
+    def destroy
         @post.destroy
-      end
+    end
 
-      private
+    private
 
-      def find_post
+    def find_post
         @post = Post.find(params[:id])
-      end
-
+    end
+    
 end
