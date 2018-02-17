@@ -1,0 +1,50 @@
+ko:
+    views:
+        shared:
+            menu:
+                edit_account: "내 계정 수정"
+                users: "음식 애호가"
+                posts: "우리 기사"
+                new_post: "새 유적 만들기"
+                sign_out: "로그 아웃"
+                from: "from"
+                post_user: "이 음식 애호가의 제품"
+
+        home:
+            index:
+                title: "안녕하세요, 우리 맛있는 미니 블로그에 오신 것을 환영합니다!"
+                consult: "기사 참조"
+                see_more: "더보기"
+
+
+        posts:
+            index:
+                title: "일부 기사"
+                consult: "기사 읽기"
+            new:
+                title: "제목"
+                title_field : "제목 쓰기"
+                content: "콘텐츠"
+                content_field : "귀하의 콘텐츠 작성"
+                comment: "내 기사 제출"
+            show:
+                title_field : "제목 쓰기"
+                content : "콘텐츠"
+                content_field : "귀하의 콘텐츠 작성"
+                submit : "내 기사 제출"
+                comment: "코멘트 남기기"
+
+        comments:
+            index:
+                comments: "의견"
+                article: "기사"
+            new:
+                title: "제목"
+                title_field:  "귀하의 코멘트 제목 선택"
+                content: "콘텐츠"
+                content_field: "의견 쓰기"
+                submit: "내 의견 제출"
+            edit:
+                edit: "귀하의 코멘트 편집"
+                your_comment : "귀하의 의견"
+                your_content : "귀하의 콘텐츠"

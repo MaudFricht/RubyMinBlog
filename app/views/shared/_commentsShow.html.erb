@@ -1,15 +1,10 @@
 <% comments.each do |comment| %>
     <div>
         <h3 ><%= comment.title %></h3>
-        <span>t('views.shared.menu.from') <%= comment.user.username %></span>
+        <span><%= t('views.shared.menu.from')%> <%= comment.user.username %></span>
         <p><%= comment.content %></p>
 
-        <% if user_signed_in? %>
-            <% if current_user.id == comment.user_id || current_user.id == comment.post.user_id%>
-                <%= button_to "Delete", {:controller => "comment", :action => 'destroy', :id => comment.id}, :confirm => "Are you sure you want to delete it ?", :method => :delete %>
 
-            <% end %>
-        <% end %>
     </div>
 
 <% end %>

@@ -1,8 +1,9 @@
 
       <div class="">
+          <p><%= link_to 'home', root_path %></p>
 
           <% if user_signed_in? %>
-            <p class="info" title="Edit y account"><%= link_to current_user.username, edit_user_registration_path %></p>
+            <p class="info" title="Edit your account"><%= link_to current_user.username, edit_user_registration_path %></p>
             <p><%= link_to t('views.shared.menu.users'), users_path %></p>
             <p><%= link_to t('views.shared.menu.posts'), posts_path %></p>
             <p><%= link_to t('views.shared.menu.new_post'), new_post_path %></p>
