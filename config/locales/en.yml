@@ -8,6 +8,7 @@ en:
                 new_post: "Create a new eaticle"
                 sign_out: "Sign out"
                 from: "from"
+                post_user: "This is eaticles of this food lovers"
 
 
         home:

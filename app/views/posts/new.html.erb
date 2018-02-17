@@ -1,5 +1,5 @@
 <%= render partial: 'shared/menu' %>
-<h1>Créer un nouvel article :</h1>
+<h1><%= t('views.posts.new.new_post')%></h1>
     <%= form_for @post do |f| %>
 
             <%= f.label t('views.posts.new.title') %><br>

@@ -25,11 +25,16 @@ class UsersController < ApplicationController
     def update
 
     end
+    def show
+        id = params[:id]
+        @posts = Post.where(user_id: id)
+        @user = User.find(id)
+    end
 
     def destroy
 
         @user = User.find(1)
-        
+
     end
 
 end
