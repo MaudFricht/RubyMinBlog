@@ -1,5 +1,4 @@
 
-
 <%= render partial: 'shared/menu' %>
 
 <h1><%= t('views.home.index.title') %></h1>
@@ -8,7 +7,7 @@
     <div>
         <h3><%= post.title %></h3>
         <p><%= post.content %></p>
-        <%= link_to 'Consulter', post_path(post.id) %>
+        <%= link_to t('views.home.index.consult'), post_path(post.id) %>
     </div>
 
     <%= link_to t('views.home.index.see_more'), post_path(post.id) %>

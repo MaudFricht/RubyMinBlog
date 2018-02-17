@@ -2,6 +2,6 @@
 
         <h2><%= post.id %> - <%= post.title %></h2>
         <span>De <%= post.user.username %></span>
-        <%= link_to "Lire l'article", post_path(post.id) %>
+        <%= link_to t('views.posts.index.consult'), post_path(post.id) %>
 
 <% end %>
