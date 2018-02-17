@@ -1,7 +1,7 @@
 <% @posts.each do |post| %>
 
         <h2><%= post.id %> - <%= post.title %></h2>
-        <span>De <%= post.user.username %></span>
+        <span><%= t.('views.shared.menu.from')%> <%= post.user.username %></span>
         <%= link_to t('views.posts.index.consult'), post_path(post.id) %>
 
 <% end %>

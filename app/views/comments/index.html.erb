@@ -1,4 +1,4 @@
-<h1>Comments</h1>
+<h1><%= t('views.comments.index.comments') %></h1>
 
 <ul>
     <% @comments.each do |comment| %>
@@ -10,4 +10,4 @@
     <% end %>
 </ul>
 
-<%= link_to "L'article", posts_path %>
+<%= link_to t('views.comments.index.article'), posts_path %>

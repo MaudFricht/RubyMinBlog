@@ -1,0 +1,46 @@
+fr:
+    views:
+        shared:
+            menu:
+                edit_account: "Modifier mon compte"
+                users: "Nos gastronomes"
+                posts: "Nos articles gourmands"
+                new_post: "Créer un nouvel article"
+                sign_out: "se deconnecter"
+                from: "de"
+
+
+        home:
+            index:
+                title: "Bienvenue sur notre délicieux Mini-blog !"
+                consult: "Consulter l'article"
+                see_more: "Voir plus"
+
+
+        posts:
+            index:
+                title: "Quelques articles"
+                consult: "Lire l'article"
+            new:
+                title: "Titre"
+                title_field: "Ecrivez votre titre"
+                content: "Contenu"
+                content_field: "Ecrivez votre article"
+                submit: "Validez et publiez votre article"
+            show:
+                comment: "Laissez un commentaire"
+
+        comments:
+            index:
+                comments: "Commentaires"
+                article: "L'article gourmand"
+            new:
+                title: "Titre"
+                title_field: "Choisissez le titre de votre commentaire"
+                content: "Contenu"
+                content_field: "Ecrivre votre commentaire"
+                submit: "Envoyez votre commentaire"
+            edit:
+                edit: "Modifier votre commentaire"
+                your_comment: "Votre commentaire"
+                your_content: "Votre contenu"

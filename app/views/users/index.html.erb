@@ -1,13 +1,12 @@
 <%= render partial: 'shared/menu' %>
-<h1>Users</h1>
+<h1><%= t('views.shared.menu.users') %></h1>
 
 <ul>
     <% @users.each do |user| %>
       <li><%= user.username %></li>
       <p><%= user.email %></p>
+      <%= link_to "View his blog", show_user_path(user.id) %>
 
 
     <% end %>
 </ul>
-
-<%= link_to 'Lien vers les posts', posts_path %>

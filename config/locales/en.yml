@@ -13,16 +13,34 @@ en:
         home:
             index:
                 title: "Hello, welcome on our delicious mini-blog !"
-                consult: "Consult article"
+                consult: "Consult articles"
                 see_more: "See more"
+
 
         posts:
             index:
                 title: "Some articles"
                 consult: "Read the article"
             new:
-                title: "title"
+                title: "Title"
                 title_field: "Write your title"
                 content: "Content"
                 content_field: "Write your content"
                 submit: "Submit my eaticle"
+            show:
+                comment: "leave a comment"
+
+        comments:
+            index:
+                comments: "comments"
+                article: "the eaticle"
+            new:
+                title: "Title"
+                title_field: "Choose the title of your comment"
+                content: "Content"
+                content_field: "Write your comment"
+                submit: "Submit my comment"
+            edit:
+                edit: "Edit your comment"
+                your_comment: "Your comment"
+                your_content: "Your content"

@@ -6,7 +6,7 @@
 <p><%= @post.user.username %></p>
 <ul>
     <% if user_signed_in? %>
-        <%= link_to "Commenter", new_comment_path(@post.id) %>
+        <%= link_to t('views.posts.show.comment'), new_comment_path(@post.id) %>
     <% end %>
     <%= render partial: 'shared/commentsShow', locals: { comments: @post.comments } %>
 

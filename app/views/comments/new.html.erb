@@ -1,15 +1,15 @@
 <h1>Laisser un commentaire :</h1>
     <%= form_for @comment, :url => { :action => "create" } do |f| %>
 
-            <%= f.label 'Titre de mon commentaire' %><br>
-            <%= f.text_area :title, placeholder: 'Le nom de votre commentaire' %><br><br>
+            <%= f.label t('views.comments.new.title') %><br>
+            <%= f.text_area :title, placeholder: t('views.comments.new.title_field') %><br><br>
 
-            <%= f.label 'Contenu' %><br>
-            <%= f.text_area :content, placeholder: 'Ecrivez votre commentaire' %><br><br>
+            <%= f.label t('views.comments.new.content') %><br>
+            <%= f.text_area :content, placeholder: t('views.comments.new.comment_field') %><br><br>
 
             <%= f.hidden_field :user_id, value: current_user.id %>
             <%= f.hidden_field :post_id, value: params[:format] %>
 
 
-            <%= f.submit 'Envoyer' %>
+            <%= f.submit t('views.comments.new.submit') %>
 <% end %>
