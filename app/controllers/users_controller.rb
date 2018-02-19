@@ -29,6 +29,7 @@ class UsersController < ApplicationController
         id = params[:id]
         @posts = Post.where(user_id: id)
         @user = User.find(id)
+        
     end
 
     def destroy
