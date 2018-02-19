@@ -1,13 +1,17 @@
-<h1><%= t('views.comments.index.comments') %></h1>
+<%= render partial: 'shared/menu' %>
 
-<ul>
-    <% @comments.each do |comment| %>
-        <li><%= comment.title %></li>
-        <li><%= comment.content %></li>
-        <li><%= comment.datetime %></li>
-        <li><%= comment.user_id %></li>
+<section class="container">
+    <h1><%= t('views.comments.index.comments') %></h1>
 
-    <% end %>
-</ul>
+    <ul>
+        <% @comments.each do |comment| %>
+            <li><%= comment.title %></li>
+            <li><%= comment.content %></li>
+            <li><%= comment.datetime %></li>
+            <li><%= comment.user_id %></li>
 
-<%= link_to t('views.comments.index.article'), posts_path %>
+        <% end %>
+    </ul>
+
+    <%= link_to t('views.comments.index.article'), posts_path %>
+</section>

@@ -1,12 +1,17 @@
 <%= render partial: 'shared/menu' %>
-<h1><%= t('views.shared.menu.users') %></h1>
 
-<ul>
-    <% @users.each do |user| %>
-      <li><%= user.username %></li>
-      <p><%= user.email %></p>
-      <%= link_to "Voir son blog", user_path(user.id) %>
+<section class="container">
+  <h1><%= t('views.shared.menu.users') %></h1>
+
+  <ul>
+      <% @users.each do |user| %>
+        <li class="profil_gastronome col-sm-5">
+          <h3><%= user.username %></h3>
+          <p><%= user.email %></p>
+          <p class="blog_gastronome"><%= link_to "Voir son blog", user_path(user.id) %></p>
+        </li>
 
 
-    <% end %>
-</ul>
+      <% end %>
+  </ul>
+</section>

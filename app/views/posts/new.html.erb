@@ -1,15 +1,18 @@
 <%= render partial: 'shared/menu' %>
-<h1><%= t('views.posts.new.new_post')%></h1>
+
+<section class="container">
+  <div class="form_framed color_blue">
+    <h1><%= t('views.posts.new.new_post')%></h1>
     <%= form_for @post do |f| %>
+      <p><%= f.label t('views.posts.new.title') %></p>
+      <p><%= f.text_field :title, placeholder: t('views.posts.new.title_field') %></p>
 
-            <%= f.label t('views.posts.new.title') %><br>
+      <p><%= f.label  t('views.posts.new.content') %></p>
+      <p><%= f.text_area :content, placeholder: t('views.posts.new.content_field') %></p>
 
-            <%= f.text_field :title, placeholder: t('views.posts.new.title_field') %><br><br>
+      <%= f.hidden_field :user_id, value: current_user.id %>
 
-            <%= f.label  t('views.posts.new.content') %><br>
-            <%= f.text_area :content, placeholder: t('views.posts.new.content_field') %><br><br>
-
-            <%= f.hidden_field :user_id, value: current_user.id %>
-
-            <%= f.submit t('views.posts.new.submit') %>
-<% end %>
+      <%= f.submit t('views.posts.new.submit') %>
+    <% end %>
+  </div>
+</section>

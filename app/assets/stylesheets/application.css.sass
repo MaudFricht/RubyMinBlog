@@ -26,7 +26,8 @@
     background-image: url("fond_inscription.jpg")
     background-repeat: repeat-x
     width: 100vw
-    height: 100vh   
+    height: 100vh 
+    margin-top: 0px  
 
 .form_framed
     background: #fff
@@ -45,7 +46,9 @@ input#user_email,
 input#user_password,
 input#user_username,
 input#user_password_confirmation,
-input#user_current_password
+input#user_current_password,
+#comment_title,
+#comment_content
     width: 100%
     max-width: 490px
     min-width: 240px
@@ -107,3 +110,39 @@ nav.nav li a:hover
     display: block
     width: 100px
     height: 100px
+
+/* PARTIE GASTRONOME */
+
+ul
+    list-style-type: none
+    margin: 0
+    padding: 0
+
+li.profil_gastronome
+    background: #eee
+    height: 200px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+    padding: 20px 50px
+    margin: 10px 10px
+
+p.blog_gastronome
+    width: 150px
+    height: 40px
+    padding: 0 10px
+    border-radius: 20px
+    background: #74b9ff
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.section_profil
+    margin-top: 20px
+
+.color_blue
+    background: #eeffff
+    border: 1px solid #74b9ff
+    padding-bottom: 30px

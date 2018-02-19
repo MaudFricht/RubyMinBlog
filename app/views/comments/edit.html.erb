@@ -1,11 +1,17 @@
-<h1><%= t('views.comments.edit.edit') %></h1>
+<%= render partial: 'shared/menu' %>
+
+<section class="container">
+  <div class="form_framed color_blue">
+    <h1><%= t('views.comments.edit.edit') %></h1>
 
     <%= form_for @comment, method: "put" do |f| %>
-    <%= f.label t('views.comments.edit.your_comment') %><br>
-    <%= f.text_area :description, placeholder: t('views.comments.edit.your_content') %><br><br>
+      <p><%= f.label t('views.comments.edit.your_comment') %></p>
+      <p><%= f.text_area :content, placeholder: t('views.comments.edit.your_content') %></p>
 
-    <%= f.hidden_field :user_id, value: current_user.id %>
-    <%= f.hidden_field :post_id, value: @comment.user_id%>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.hidden_field :post_id, value: @comment.user_id%>
 
-    <%= f.submit t('views.comments.new.submit') %>
-<% end %>
+      <%= f.submit t('views.comments.new.submit') %>
+    <% end %>
+  </div>
+</section>
