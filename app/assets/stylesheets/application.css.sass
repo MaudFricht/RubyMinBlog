@@ -16,3 +16,65 @@
 
 @import "bootstrap-sprockets"
 @import "bootstrap"
+
+body
+    background-image: url("fond_inscription.jpg")  
+
+.form_container
+    background: #fff
+    margin-top: 10%
+    padding: 20px 40px
+    max-width: 580px
+
+h2
+    margin-bottom: 20px
+
+// .form
+//     width: 100%
+//     margin: auto
+    
+div.field:nth-of-type(1)
+    margin-top: 0px
+
+input#user_email, 
+input#user_password, 
+input#user_username, 
+input#user_password_confirmation
+    width: 100%
+    max-width: 490px
+    min-width: 240px
+
+p.label
+    font-size: 16px
+    color: black
+    padding-left: 0px
+
+.remember_input
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+
+input#user_remember_me
+    margin-right: 20px
+
+.actions,
+.signin_signup
+    display: flex
+    flex-direction: row
+    margin-top: 20px
+    margin-bottom: 10px
+
+.actions
+    justify-content: center
+
+.signin_signup
+    justify-content: space-between
+
+.actions input
+    width: auto
+    height: 40px
+    padding: 0 10px
+    border-radius: 20px
+    background: #74b9ff
+    border: none
+    color: white

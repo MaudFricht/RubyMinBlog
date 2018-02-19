@@ -1,34 +1,43 @@
-<h2>Sign up</h2>
+<section class="container form_container">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+  <h1>Bonjour, avant daccéder au site merci de vous enregistrer</h1>
+  <h2>Inscription</h2>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username, autofocus: true %>
-  </div>
+    <div class="field">
+      <p class="label"><%= f.label :email %></p>
+      <p><%= f.email_field :email, autofocus: true %></p>
+    </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+    <div class="field">
+      <p class="label"><%= f.label :username %></p>
+      <p><%= f.text_field :username, autofocus: true %></p>
+    </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+    <div class="field">
+      <p class="label"><%= f.label :password %></p>
+      <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+      <p><%= f.password_field :password, autocomplete: "off" %></p>
+    </div>
 
-<%= render "devise/shared/links" %>
+    <div class="field">
+      <p class="label"><%= f.label :password_confirmation %></p>
+      <p><%= f.password_field :password_confirmation, autocomplete: "off" %></p>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "M'inscrire" %>
+    </div>
+
+    <div class="signin_signup">
+      <%= render "devise/shared/links" %>
+    </div>
+
+  <% end %>
+
+</section>
