@@ -17,21 +17,26 @@
 @import "bootstrap-sprockets"
 @import "bootstrap"
 
-body
-    background-image: url("fond_inscription.jpg")  
+.container, .container-fluid
+    padding: 0px !important
+
+/*PARTIES DES FORMULAIRES*/
 
 .form_container
+    background-image: url("fond_inscription.jpg")
+    background-repeat: repeat-x
+    width: 100vw
+    height: 100vh   
+
+.form_framed
     background: #fff
-    margin-top: 10%
+    margin: auto
+    margin-top: 5%
     padding: 20px 40px
     max-width: 580px
 
 h2
     margin-bottom: 20px
-
-// .form
-//     width: 100%
-//     margin: auto
 
 div.field:nth-of-type(1)
     margin-top: 0px
@@ -39,7 +44,8 @@ div.field:nth-of-type(1)
 input#user_email,
 input#user_password,
 input#user_username,
-input#user_password_confirmation
+input#user_password_confirmation,
+input#user_current_password
     width: 100%
     max-width: 490px
     min-width: 240px
@@ -78,3 +84,26 @@ input#user_remember_me
     background: #74b9ff
     border: none
     color: white
+
+/*PARTIE DU MENU*/
+
+nav.nav
+    background: #eee
+    padding-left: 50px
+    padding-right: 50px
+
+nav.nav li
+    // float: left
+
+nav.nav li a
+    padding: 10px 10px
+    font-size: 16px
+
+nav.nav li a:hover
+    background: #74b9ff !important
+    color: white !important
+
+.dropdown, .dropdown-toggle
+    display: block
+    width: 100px
+    height: 100px

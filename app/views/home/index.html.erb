@@ -1,14 +1,16 @@
 <%= render partial: 'shared/menu' %>
 
-<h1><%= t('views.home.index.title') %></h1>
+<section class="container">
+    <h1><%= t('views.home.index.title') %> <%= link_to current_user.username, user_path(current_user.id) %></h1>
 
-<% @posts.each do |post| %>
-    <div>
-        <h3><%= post.title %></h3>
-        <p><%= post.content %></p>
-        <%= link_to t('views.home.index.consult'), post_path(post.id) %>
-    </div>
+    <% @posts.each do |post| %>
+        <div>
+            <h3><%= post.title %></h3>
+            <p><%= post.content %></p>
+            <%= link_to t('views.home.index.consult'), post_path(post.id) %>
+        </div>
 
-    <%= link_to t('views.home.index.see_more'), post_path(post.id) %>
+        <%= link_to t('views.home.index.see_more'), post_path(post.id) %>
 
-<% end %>
+    <% end %>
+</section>

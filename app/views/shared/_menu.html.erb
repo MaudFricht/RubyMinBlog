@@ -1,15 +1,20 @@
+<section class="container-fluid">
+  <nav class="nav nav-pills nav-fill">
+    <li class="nav-item"><%= link_to 'Home', root_path %></li>
 
-      <div class="">
-          <p><%= link_to 'home', root_path %></p>
+    <% if user_signed_in? %>
 
-          <% if user_signed_in? %>
-            <p class="info" title="Edit your account"><%= link_to current_user.username, edit_user_registration_path %></p>
-            <p><%= link_to t('views.shared.menu.users'), users_path %></p>
-            <p><%= link_to t('views.shared.menu.posts'), posts_path %></p>
-            <p><%= link_to t('views.shared.menu.new_post'), new_post_path %></p>
-            <p><%= link_to t('views.shared.menu.sign_out'), destroy_user_session_path, method: :delete %></p>
+      <li class="nav-item"><%= link_to current_user.username, user_path(current_user.id) %></li>
+      
+      <li class="nav-item"><%= link_to t('views.shared.menu.users'), users_path %></li>
+      <li class="nav-item"><%= link_to t('views.shared.menu.posts'), posts_path %></li>
+      <li class="nav-item"><%= link_to t('views.shared.menu.new_post'), new_post_path %></li>
 
-          <% else %>
-            <p><%= link_to t('views.shared.menu.sign_out'), user_session_path, method: :get %></p>
-          <% end %>
-      </div>
+      <li class="nav-item"><%= link_to "Modifier mon profil", edit_user_registration_path %></li>
+      <li class="nav-item"><%= link_to t('views.shared.menu.sign_out'), destroy_user_session_path, method: :delete %></li>
+          
+    <% else %>
+      <li class="nav-item"><%= link_to t('views.shared.menu.sign_out'), user_session_path, method: :get %></li>
+    <% end %>
+  </nav>
+</section>

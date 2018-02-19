@@ -1,34 +1,37 @@
 <section class="container form_container">
+  <div class="form_framed">
 
-  <h1>Bonjour, avant d'accéder au contenu alléchant de ce site merci de t'enregistrer</h1>
-  <h2>Connexion</h2>
+    <h1>Bonjour, avant d'accéder au contenu alléchant de ce site merci de t'enregistrer</h1>
+    <h2>Connexion</h2>
 
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="field">
-      <p class="label"><%= f.label :email %></p>
-      <p><%= f.email_field :email, autofocus: true, autocomplete: "email" %></p>
-    </div>
-
-    <div class="field">
-      <p class="label"><%= f.label :password %></p>
-      <p><%= f.password_field :password, autocomplete: "off" %></p>
-    </div>
-
-    <% if devise_mapping.rememberable? -%>
-      <div class="field remember_input">
-        <p><%= f.check_box :remember_me %></p>
-        <p><%= f.label :remember_me %></p>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <p class="label"><%= f.label :email %></p>
+        <p><%= f.email_field :email, autofocus: true, autocomplete: "email" %></p>
       </div>
-    <% end -%>
 
-    <div class="actions">
-      <p><%= f.submit "Me connecter" %></p>
-    </div>
+      <div class="field">
+        <p class="label"><%= f.label :password %></p>
+        <p><%= f.password_field :password, autocomplete: "off" %></p>
+      </div>
 
-    <div class="signin_signup">
-      <%= render "devise/shared/links" %>
-    </div>
-      
-  <% end %>
-  
+      <% if devise_mapping.rememberable? -%>
+        <div class="field remember_input">
+          <p><%= f.check_box :remember_me %></p>
+          <p><%= f.label :remember_me %></p>
+        </div>
+      <% end -%>
+
+      <div class="actions">
+        <p><%= f.submit "Me connecter" %></p>
+      </div>
+
+      <div class="signin_signup">
+        <%= render "devise/shared/links" %>
+      </div>
+        
+    <% end %>
+
+  </div>
+
 </section>
